@@ -38,46 +38,39 @@ const ILMWebsite = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 10000);
     return () => clearInterval(timer);
   }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Floating Top Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-white/20">
         <div className="max-w-8xl mx-auto flex justify-between items-center py-2 px-4 sm:px-6 lg:px-8">
+          <div></div>
           <div className="flex space-x-4 sm:space-x-6 text-gray-600">
             <a href="#" className="hover:text-blue-600 transition-all duration-300 hover:scale-110">
-              <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Linkedin className="w-2 h-2 sm:w-4 sm:h-4" />
             </a>
             <a href="#" className="hover:text-gray-800 transition-all duration-300 hover:scale-110">
-              <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Twitter className="w-2 h-2 sm:w-4 sm:h-4" />
             </a>
             <a href="#" className="hover:text-blue-700 transition-all duration-300 hover:scale-110">
-              <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Facebook className="w-2 h-2 sm:w-4 sm:h-4" />
             </a>
             <a href="#" className="hover:text-pink-600 transition-all duration-300 hover:scale-110">
-              <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Instagram className="w-2 h-2 sm:w-4 sm:h-4" />
             </a>
             <a href="#" className="hover:text-red-600 transition-all duration-300 hover:scale-110">
-              <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Youtube className="w-2 h-2 sm:w-4 sm:h-4" />
             </a>
           </div>
 
-          <div className="hidden md:flex space-x-4 lg:space-x-6 text-xs sm:text-sm text-gray-600">
+          {/* <div className="hidden md:flex space-x-4 lg:space-x-6 text-xs  text-gray-600">
             <a href="#" className="hover:text-blue-600 transition-colors relative after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 after:transition-all hover:after:w-full">Join Our Team</a>
             <a href="#" className="hover:text-blue-600 transition-colors relative after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 after:transition-all hover:after:w-full">Request A Quote</a>
             <a href="#" className="hover:text-blue-600 transition-colors relative after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-blue-600 after:transition-all hover:after:w-full">Sitemap</a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -97,6 +90,8 @@ const ILMWebsite = () => {
 
             {/* Desktop Navigation with Hover Effects */}
             <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+              <a href="#" className="text-gray-700 hover:text-white font-medium transition-all duration-300 hover:scale-105">Home</a>
+
               {['About Us'].map((item) => (
                 <div key={item} className="relative group">
                   <button className="flex items-center text-gray-700 hover:text-gray-700 font-medium transition-all duration-300 group-hover:scale-105">
@@ -111,7 +106,7 @@ const ILMWebsite = () => {
                   </div>
                 </div>
               ))}
-              <a href="#" className="text-gray-700 hover:text-white font-medium transition-all duration-300 hover:scale-105">Careers</a>
+              {/* <a href="#" className="text-gray-700 hover:text-white font-medium transition-all duration-300 hover:scale-105">Careers</a> */}
               <a href="#" className="text-gray-700 hover:text-white font-medium transition-all duration-300 hover:scale-105">Contact Us</a>
               {/* <button className="text-blue-600 hover:text-blue-700 hover:scale-110 transition-all duration-300">
                 <Search className="w-5 h-5" />
