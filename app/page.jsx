@@ -13,16 +13,11 @@ import {
   Mail,
   Phone,
   MapPin,
-  Play,
   Award,
   Users,
   TrendingUp,
   Zap,
-  BookOpen,
-  BarChart3,
-  Microscope,
   Globe,
-  Shield,
   ChevronUp,
   Code,
   Smartphone,
@@ -77,7 +72,8 @@ const IlmiWebsite = () => {
       subtitle:
         "Chez ilmi-consulting & services, nous combinons expertise technique, stratégie innovante et excellence en développement pour accompagner les leaders dans leurs décisions technologiques critiques",
       buttonText: "Découvrir Notre Histoire",
-      image: "",
+      image:
+        "https://plus.unsplash.com/premium_photo-1661764570116-b1b0a2da783c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
