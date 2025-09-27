@@ -73,7 +73,7 @@ const IlmiWebsite = () => {
         "Chez ilmi-consulting & services, nous combinons expertise technique, stratégie innovante et excellence en développement pour accompagner les leaders dans leurs décisions technologiques critiques",
       buttonText: "Découvrir Notre Histoire",
       image:
-        "https://plus.unsplash.com/premium_photo-1661764570116-b1b0a2da783c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1594892185343-0241e1d47d15?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
@@ -149,83 +149,21 @@ const IlmiWebsite = () => {
               >
                 Accueil
               </a>
-
-              {["À Propos"].map((item) => (
-                <div key={item} className="relative group">
-                  <button className="flex items-center text-gray-700 hover:text-gray-700 font-medium transition-all duration-300 group-hover:scale-105">
-                    {item}{" "}
-                    <ChevronDown className="ml-1 w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                  </button>
-                  <div className="absolute top-full left-0 w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 mt-2 border border-gray-100">
-                    <div className="p-4 space-y-2">
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Notre Histoire
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Équipe de Direction
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Mission & Valeurs
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-              {["Services"].map((item) => (
-                <div key={item} className="relative group">
-                  <button className="flex items-center text-gray-700 hover:text-gray-700 font-medium transition-all duration-300 group-hover:scale-105">
-                    {item}{" "}
-                    <ChevronDown className="ml-1 w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                  </button>
-                  <div className="absolute top-full left-0 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 mt-2 border border-gray-100">
-                    <div className="p-4 space-y-2">
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Développement Web
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Applications Mobiles
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Solutions Cloud
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Intelligence Artificielle
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200"
-                      >
-                        Logiciels Sur Mesure
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <a
+                href="#about"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105"
+              >
+                À Propos
+              </a>
 
               <a
-                href="#"
+                href="#services"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105"
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105"
               >
                 Contact
@@ -350,7 +288,10 @@ const IlmiWebsite = () => {
       </section>
 
       {/* Section À Propos Moderne avec Layout Bento */}
-      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20 relative overflow-hidden">
+      <section
+        id="about"
+        className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20 relative overflow-hidden"
+      >
         {/* Motif d'Arrière-plan */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,_rgba(59,130,246,0.05)_0%,_transparent_50%)] bg-[radial-gradient(circle_at_70%_80%,_rgba(147,51,234,0.05)_0%,_transparent_50%)]"></div>
 
@@ -447,7 +388,10 @@ const IlmiWebsite = () => {
       </section>
 
       {/* Section Services Révolutionnaire */}
-      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+      <section
+        id="services"
+        className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
+      >
         {/* Éléments d'Arrière-plan Animés */}
         <div className="absolute inset-0">
           <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-blue-100 rounded-full blur-3xl opacity-30 animate-pulse"></div>
@@ -798,6 +742,8 @@ const IlmiWebsite = () => {
 
               {/* Informations de Contact */}
               <div className="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
+                <div id="contact" className="mb-32"></div>
+
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-blue-400" />
                   <span>contact@ilmi-consulting.fr</span>
